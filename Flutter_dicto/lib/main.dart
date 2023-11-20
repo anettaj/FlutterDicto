@@ -3,8 +3,11 @@ import 'package:flutter_dicto/Section/Color/Color.dart';
 import 'package:flutter_dicto/Section/Grid/Grid_count.dart';
 import 'package:flutter_dicto/Section/Image_view.dart';
 import 'package:flutter_dicto/Section/Menu_view.dart';
+import 'package:flutter_dicto/Section/Tab/Tab.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:stacked_card_carousel/stacked_card_carousel.dart';
+
+import 'Section/ListTile/List_view_listtile.dart';
 
 void main() => runApp(MyApp());
 
@@ -43,15 +46,14 @@ class MyHomePage extends StatelessWidget {
       title: "Grid",
       link:  Grid_count(),
     ),
-    // FancyCard(
-    //   title: "Enjoy your coffee!",
-    //   link: Menu_view(),
-    // ),
-    // FancyCard(
-    //
-    //   title: "Play with your cat!",
-    //   link: Menu_view(),
-    // ),
+    FancyCard(
+      title: "ListTile",
+      link: List1(),
+    ),
+    FancyCard(
+      title: "Tab",
+      link: Tab_view1(),
+    ),
   ];
 
   @override
