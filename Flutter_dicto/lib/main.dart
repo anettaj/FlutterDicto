@@ -1,3 +1,4 @@
+import 'package:flutter_dicto/Section/ExpansionText/Expansion_card.dart';
 import 'package:stacked_card_carousel/stacked_card_carousel.dart';
 import 'package:flutter_dicto/Section/Grid/Grid_count.dart';
 import 'package:flutter_dicto/Section/Pdf/Pdf_viewer.dart';
@@ -59,6 +60,10 @@ class MyHomePage extends StatelessWidget {
       title: "PDF Viewer",
       link: Pdf_viewer(),
     ),
+    FancyCard(
+      title: "ExpansionTile",
+      link: Expansion_card(),
+    ),
   ];
 
   @override
@@ -94,7 +99,8 @@ class FancyCard extends StatelessWidget {
     double H = MediaQuery.of(context).size.height;
     double W = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.all(20.0),
+
+      margin: EdgeInsets.all(5.0),
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(
