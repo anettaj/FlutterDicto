@@ -43,7 +43,8 @@ dependencies:
   vertical_card_pager: ^1.4.0
   #cate1
   scaled_list: ^2.0.0
-
+  #pdf_viewer
+  syncfusion_flutter_pdfviewer: ^23.2.4
 dev_dependencies:
   flutter_test:
     sdk: flutter

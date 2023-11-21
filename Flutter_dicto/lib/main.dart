@@ -1,13 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_dicto/Section/Color/Color.dart';
+import 'package:stacked_card_carousel/stacked_card_carousel.dart';
 import 'package:flutter_dicto/Section/Grid/Grid_count.dart';
+import 'package:flutter_dicto/Section/Pdf/Pdf_viewer.dart';
+import 'package:flutter_dicto/Section/Color/Color.dart';
 import 'package:flutter_dicto/Section/Image_view.dart';
 import 'package:flutter_dicto/Section/Menu_view.dart';
 import 'package:flutter_dicto/Section/Tab/Tab.dart';
-import 'package:flutter_dicto/Widgets/Size.dart';
-import 'package:stacked_card_carousel/stacked_card_carousel.dart';
-
 import 'Section/ListTile/List_view_listtile.dart';
+import 'package:flutter_dicto/Widgets/Size.dart';
+import 'package:flutter/material.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -53,6 +54,10 @@ class MyHomePage extends StatelessWidget {
     FancyCard(
       title: "Tab",
       link: Tab_view1(),
+    ),
+    FancyCard(
+      title: "PDF Viewer",
+      link: Pdf_viewer(),
     ),
   ];
 
