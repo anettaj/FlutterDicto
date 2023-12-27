@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dicto/Section/Widget_view.dart';
 import 'package:flutter_dicto/main.dart';
 class Grid_count extends StatelessWidget {
   const Grid_count({super.key});
@@ -9,14 +10,14 @@ class Grid_count extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xFFC69749),
         title: Text(
-          'Image viwer',
+          'Grid',
         ),
         leading: IconButton(
           onPressed: (){
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                    builder: (context)=>MyHomePage()
+                    builder: (context)=>Widget_card()
 
                 ),
                     (route)=>false

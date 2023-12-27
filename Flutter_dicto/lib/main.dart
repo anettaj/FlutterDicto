@@ -1,14 +1,13 @@
-import 'package:flutter_dicto/Section/ExpansionText/Expansion_card.dart';
+import 'package:flutter_dicto/Section/Api_view.dart';
+import 'package:flutter_dicto/Section/Form_view.dart';
 import 'package:stacked_card_carousel/stacked_card_carousel.dart';
-import 'package:flutter_dicto/Section/Grid/Grid_count.dart';
 import 'package:flutter_dicto/Section/Pdf/Pdf_viewer.dart';
-import 'package:flutter_dicto/Section/Color/Color.dart';
 import 'package:flutter_dicto/Section/Image_view.dart';
 import 'package:flutter_dicto/Section/Menu_view.dart';
-import 'package:flutter_dicto/Section/Tab/Tab.dart';
-import 'Section/ListTile/List_view_listtile.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter/material.dart';
+import 'Section/WebView/WebView.dart';
+import 'Section/Widget_view.dart';
 
 
 void main() => runApp(MyApp());
@@ -41,29 +40,29 @@ class MyHomePage extends StatelessWidget {
       link:Menu_view(),
     ),
     FancyCard(
-      title: "Color",
-      link: Color_view(),
+      title: "Widget view",
+      link: Widget_card(),
     ),
     FancyCard(
-      title: "Grid",
-      link:  Grid_count(),
+      title: "API view",
+      link:  Api_view(),
     ),
     FancyCard(
-      title: "ListTile",
-      link: List1(),
+      title: "Contact view",
+      link: Form_view(),
     ),
     FancyCard(
-      title: "Tab",
-      link: Tab_view1(),
+      title: "Web view",
+      link: WebViewExample(),
     ),
     FancyCard(
       title: "PDF Viewer",
       link: Pdf_viewer(),
     ),
-    FancyCard(
-      title: "ExpansionTile",
-      link: Expansion_card(),
-    ),
+    // FancyCard(
+    //   title: "ExpansionTile",
+    //   link: Expansion_card(),
+    // ),
   ];
 
   @override

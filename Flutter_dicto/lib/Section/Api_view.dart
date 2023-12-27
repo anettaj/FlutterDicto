@@ -1,35 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dicto/Section/Image/Image1.dart';
-import 'package:flutter_dicto/Section/Image/Image2.dart';
+import 'package:flutter_dicto/Section/API/ApiRead.dart';
+import 'package:flutter_dicto/Section/API/ApiReadApiCall.dart';
+import 'package:flutter_dicto/Section/API/ApiWrite.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 
 
 
-class Image_view extends StatelessWidget {
-  Image_view({Key? key}) : super(key: key);
+class Api_view extends StatelessWidget {
+  Api_view({Key? key}) : super(key: key);
 
 
-  final List<Widget> ImageCard = <Widget>[
-    ImageCards(
+  final List<Widget> ApiCard = <Widget>[
+    ApiCards(
       color: Color(0xFFffd22b),
-      title: "vertical_card_pager.dart",
-      link:Image1(),
+      title: "Api Read",
+      link: ApiRead(),
       image: 'assets/images/image1.gif',
     ),
-    ImageCards(
+    ApiCards(
       color: Color(0xFFfeb204),
-      title: "flutter_image_slideshow.dart",
-      link:Image2(),
+      title: "API read call",
+      link:ApiReadCall(),
       image: 'assets/images/image2.png',
-
     ),
-    // ImageCards(
-    //   color: Color(0xFFff8503),
-    //   title: "Go for a walk!",
-    //   link: () => Image2(),
-    //   image: 'assets/images/image1.gif',
-    // ),
+    ApiCards(
+      color: Color(0xFFff8503),
+      title: "Api Write",
+      link:ApiWrite(),
+      image: 'assets/images/image1.gif',
+    ),
     // ImageCards(
     //   color: Color(0xFFd53600),
     //   title: "Try teleportation!",
@@ -58,7 +58,7 @@ class Image_view extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xFFC69749),
         title: Text(
-          'Image viwer',
+          'API',
         ),
         leading: IconButton(
           onPressed: (){
@@ -77,14 +77,14 @@ class Image_view extends StatelessWidget {
         ),
       ),
       body: ListView(
-        children: ImageCard,
+        children: ApiCard,
       ),
     );
   }
 }
 
-class ImageCards extends StatelessWidget {
-  const ImageCards({
+class ApiCards extends StatelessWidget {
+  const ApiCards({
     Key? key,
     required this.color,
     required this.title,
@@ -114,16 +114,16 @@ class ImageCards extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
-              alignment: AlignmentDirectional.center,
+              alignment: AlignmentDirectional.centerStart,
 
               color: color,
               height: H/3,
               width:W,
-              child:  Image.asset(
-                '$image',
-                fit: BoxFit.fitHeight,
-
-              ),
+              // child:  Image.asset(
+              //   '$image',
+              //   fit: BoxFit.fitHeight,
+              //
+              // ),
 
             ),
             Positioned(

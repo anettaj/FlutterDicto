@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dicto/Section/Widget_view.dart';
 
-import '../../Widgets/Size.dart';
-import '../../main.dart';
+import '../../../Widgets/Size.dart';
+
 class List1 extends StatelessWidget {
   const List1({super.key});
 
@@ -20,7 +21,7 @@ class List1 extends StatelessWidget {
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                    builder: (context)=>MyHomePage()
+                    builder: (context)=>Widget_card()
 
                 ),
                     (route)=>false
@@ -43,22 +44,22 @@ class List1 extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Tamil Nadu dental council',
+            Text('Title',
               style: TextStyle(
                   fontSize: 18
               ),
             ),
             ListTile(
               leading: Icon(Icons.phone_android),
-              title: Text('044 2363 8476'),
+              title: Text('phone number'),
             ),
             ListTile(
               leading: Icon(Icons.email_outlined),
-              title: Text('tndental107@gmail.com'),
+              title: Text('email'),
             ),
             ListTile(
               leading: Icon(Icons.location_on_outlined),
-              title: Text('5-0-3, Arihant Majestic Towers,\n216, 100 Feet Rd, Jai Nagar,\nKoyambedu, Chennai,\nTamil Nadu 600107'),
+              title: Text('address'),
             ),
           ],
         ),

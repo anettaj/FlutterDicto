@@ -28,30 +28,66 @@ class Image2 extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        width: W,
-        height: H/2,
+      body: Column(
+        children: [
+          Container(
+            width: W,
+            height: H/2,
 
-        child: ImageSlideshow(
+            child: ImageSlideshow(
 
-          indicatorColor: Colors.blue,
-          onPageChanged: (value) {
-            debugPrint('Page changed: $value');
-          },
-          autoPlayInterval: 60000,
-          isLoop: true,
-          children: [
-            Image.network(
-              'http://atstesting.in/software/images/slider/slide1.jpeg',
-              fit: BoxFit.cover,
+              indicatorColor: Colors.blue,
+              onPageChanged: (value) {
+                debugPrint('Page changed: $value');
+              },
+              autoPlayInterval: 60000,
+              isLoop: true,
+              children: [
+                Image.network(
+                  'https://res.cloudinary.com/dljwalapq/image/upload/v1700756486/bh7i5dipormjhpgfwey5.jpg',
+                  fit: BoxFit.cover,
+                ),
+
+                Image.network(
+                  'https://res.cloudinary.com/dljwalapq/image/upload/v1700756486/jrz06ew2x9lxjxg7gabo.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ],
             ),
+          ),
+          SizedBox(height: 10,),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Container(
 
-            Image.network(
-              'http://atstesting.in/software/images/slider/slide2.jpg',
-              fit: BoxFit.cover,
+              height: H*0.23,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: ImageSlideshow(
+                  indicatorColor: Colors.blue,
+                  onPageChanged: (value) {
+                    debugPrint('Page changed: $value');
+                  },
+                  autoPlayInterval: 60000,
+                  isLoop: true,
+                  children: [
+                    Image.network(
+                              'https://res.cloudinary.com/dljwalapq/image/upload/v1700756486/bh7i5dipormjhpgfwey5.jpg',
+                              fit: BoxFit.fill
+                          ),
+
+                     Image.network(
+                         'https://res.cloudinary.com/dljwalapq/image/upload/v1700756486/jrz06ew2x9lxjxg7gabo.jpg',
+                              fit: BoxFit.fill
+                          )
+
+
+                  ],
+                ),
+              ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

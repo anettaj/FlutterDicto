@@ -1,9 +1,11 @@
 import 'package:flutter/widgets.dart';
 
 class ScreenSize {
-  static double Height(BuildContext context) =>
-      MediaQuery.of(context).size.height;
+  static double Height(BuildContext context) {
+    return MediaQuery.of(context).size.height;
+    }
 
-  static double Width(BuildContext context) =>
-      MediaQuery.of(context).size.width;
+  static double Width(BuildContext context) {
+    return MediaQuery.of(context).size.width;
+  }
 }

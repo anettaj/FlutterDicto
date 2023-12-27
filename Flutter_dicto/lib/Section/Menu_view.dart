@@ -10,7 +10,7 @@ class Menu_view extends StatelessWidget {
   final List<Widget> fancyCards = <Widget>[
     FancyCard(
       color: Color(0xFFffd22b),
-      title: "Image Sliding",
+      title: "scaled_list.dart",
       link: () => Cate1(),
       image: 'assets/images/Cate1.png',
     ),
@@ -109,15 +109,25 @@ class FancyCard extends StatelessWidget {
               color: color,
               height: H/3,
               width:W,
-              alignment: AlignmentDirectional.centerStart,
+              alignment: AlignmentDirectional.center,
               child: Image.asset('$image',
                 fit: BoxFit.fitHeight,
               ),
 
             ),
             Positioned(
-                right: 50,
-                child: Text('$image')
+                child:Container(
+                  color: Colors.black45,
+
+                  child: Center(
+                    child: Text('$title',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold
+                      ),),
+                  ),
+                )
             ),
 
 

@@ -1,47 +1,58 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dicto/Section/Image/Image1.dart';
 import 'package:flutter_dicto/Section/Image/Image2.dart';
+import 'package:flutter_dicto/Section/Widget/Color/Color.dart';
+import 'package:flutter_dicto/Section/Widget/ExpansionText/Expansion_card.dart';
+import 'package:flutter_dicto/Section/Widget/Grid/Grid_count.dart';
+import 'package:flutter_dicto/Section/Widget/ListTile/List_view_listtile.dart';
+import 'package:flutter_dicto/Section/Widget/Scratcher/Scartcher.dart';
+import 'package:flutter_dicto/Section/Widget/Tab/Tab.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
+import 'package:stacked_card_carousel/stacked_card_carousel.dart';
 
 
+class Widget_card extends StatelessWidget {
+  Widget_card({Key? key}) : super(key: key);
 
-class Image_view extends StatelessWidget {
-  Image_view({Key? key}) : super(key: key);
 
-
-  final List<Widget> ImageCard = <Widget>[
-    ImageCards(
+  final List<Widget> WidgetCard = <Widget>[
+    WidgetCards(
       color: Color(0xFFffd22b),
-      title: "vertical_card_pager.dart",
-      link:Image1(),
+      title: "Colour",
+      link:Color_view(),
+      image: 'assets/Widget_img/Colorhex.jpeg',
+    ),
+    WidgetCards(
+      color: Color(0xFFfeb204),
+      title: "Gird",
+      link: Grid_count(),
+      image: 'assets/Widget_img/Grid.jpeg',
+    ),
+  WidgetCards(
+      color: Color(0xFFff8503),
+      title: "Expansion Text",
+      link:Expansion_card(),
+      image: 'assets/Widget_img/Expan1.jpeg',
+    ),
+    WidgetCards(
+      color: Color(0xFFd53600),
+      title: "Tab",
+      link:Tab_view1(),
+      image: 'assets/Widget_img/Tab.jpeg',
+    ),
+    WidgetCards(
+      color: Color(0xFFd53600),
+      title: "ListTile",
+      link: List1(),
+      image: 'assets/Widget_img/ListTile.jpeg',
+    ),
+    WidgetCards(
+      color: Color(0xFF7e261a),
+      title: "Play with your cat!",
+      link: Scratcher(),
       image: 'assets/images/image1.gif',
     ),
-    ImageCards(
-      color: Color(0xFFfeb204),
-      title: "flutter_image_slideshow.dart",
-      link:Image2(),
-      image: 'assets/images/image2.png',
-
-    ),
-    // ImageCards(
-    //   color: Color(0xFFff8503),
-    //   title: "Go for a walk!",
-    //   link: () => Image2(),
-    //   image: 'assets/images/image1.gif',
-    // ),
-    // ImageCards(
-    //   color: Color(0xFFd53600),
-    //   title: "Try teleportation!",
-    //   link: () => Image2(),
-    //   image: 'assets/images/image1.gif',
-    // ),
-    // ImageCards(
-    //   color: Color(0xFF700e01),
-    //   title: "Enjoy your coffee!",
-    //   link: () => Image2(),
-    //   image: 'assets/images/image1.gif',
-    // ),
     // ImageCards(
     //   color: Color(0xFF7e261a),
     //   title: "Play with your cat!",
@@ -58,7 +69,7 @@ class Image_view extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color(0xFFC69749),
         title: Text(
-          'Image viwer',
+          'Widget viwer',
         ),
         leading: IconButton(
           onPressed: (){
@@ -77,14 +88,14 @@ class Image_view extends StatelessWidget {
         ),
       ),
       body: ListView(
-        children: ImageCard,
+        children: WidgetCard,
       ),
     );
   }
 }
 
-class ImageCards extends StatelessWidget {
-  const ImageCards({
+class WidgetCards extends StatelessWidget {
+  const WidgetCards({
     Key? key,
     required this.color,
     required this.title,
@@ -127,7 +138,8 @@ class ImageCards extends StatelessWidget {
 
             ),
             Positioned(
-                child:Container(
+
+                child: Container(
                   color: Colors.black45,
 
                   child: Center(
