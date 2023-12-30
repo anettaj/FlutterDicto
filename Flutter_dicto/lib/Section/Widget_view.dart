@@ -50,7 +50,7 @@ class Widget_card extends StatelessWidget {
     WidgetCards(
       color: Color(0xFF7e261a),
       title: "Play with your cat!",
-      link: Scratcher(),
+      link: ScratcherCard(),
       image: 'assets/images/image1.gif',
     ),
     // ImageCards(
