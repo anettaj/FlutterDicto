@@ -2,12 +2,12 @@ import 'package:flutter_dicto/Section/Api_view.dart';
 import 'package:flutter_dicto/Section/Form_view.dart';
 import 'package:flutter_dicto/Section/Package_view.dart';
 import 'package:stacked_card_carousel/stacked_card_carousel.dart';
-import 'package:flutter_dicto/Section/Pdf/Pdf_viewer.dart';
+import 'package:flutter_dicto/Section/Package/Pdf_viewer.dart';
 import 'package:flutter_dicto/Section/Image_view.dart';
 import 'package:flutter_dicto/Section/Menu_view.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter/material.dart';
-import 'Section/WebView/WebView.dart';
+import 'Section/Package/WebView.dart';
 import 'Section/Widget_view.dart';
 
 void main() => runApp(MyApp());
@@ -31,6 +31,10 @@ class MyHomePage extends StatelessWidget {
 
   final List<Widget> fancyCards = <Widget>[
     FancyCard(
+      title: "Package view",
+      link: Package_view(),
+    ),
+    FancyCard(
       title: "Image View",
       link: Image_view(),
     ),
@@ -47,21 +51,18 @@ class MyHomePage extends StatelessWidget {
       link: Api_view(),
     ),
     FancyCard(
-      title: "Contact view",
+      title: "Readymade view",
       link: Form_view(),
     ),
-    FancyCard(
-      title: "Web view",
-      link: WebViewExample(),
-    ),
-    FancyCard(
-      title: "PDF Viewer",
-      link: Pdf_viewer(),
-    ),
-    FancyCard(
-      title: "Package view",
-      link: Package_view(),
-    ),
+    // FancyCard(
+    //   title: "Web view",
+    //   link: WebViewExample(),
+    // ),
+    // FancyCard(
+    //   title: "PDF Viewer",
+    //   link: Pdf_viewer(),
+    // ),
+
     // FancyCard(
     //   title: "ExpansionTile",
     //   link: Expansion_card(),
@@ -99,7 +100,7 @@ class FancyCard extends StatelessWidget {
     double H = MediaQuery.of(context).size.height;
     double W = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.all(5.0),
+      margin: EdgeInsets.only(left: 8, right: 8, bottom: 8),
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(
@@ -111,12 +112,12 @@ class FancyCard extends StatelessWidget {
             Image.asset(
               'assets/images/Folder.png',
               fit: BoxFit.fill,
-              height: H * 0.4,
+              height: H * 0.45,
             ),
             Positioned(
               top: H / 8,
-              left: H / 7,
-              right: H / 8,
+              left: H / 8,
+              right: H / 9,
               child: Center(
                 child: Text(
                   title,

@@ -25,7 +25,6 @@ class _WebViewExampleState extends State<WebViewExample> {
           onProgress: (int progress) {
             // Update loading bar.
           },
-
         ),
       )
       ..loadRequest(Uri.parse('https://flutter.dev'));

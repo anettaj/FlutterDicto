@@ -5,22 +5,20 @@ import 'package:flutter_dicto/Section/Widget/Color/Color.dart';
 import 'package:flutter_dicto/Section/Widget/ExpansionText/Expansion_card.dart';
 import 'package:flutter_dicto/Section/Widget/Grid/Grid_count.dart';
 import 'package:flutter_dicto/Section/Widget/ListTile/List_view_listtile.dart';
-import 'package:flutter_dicto/Section/Widget/Scratcher/Scartcher.dart';
+import 'package:flutter_dicto/Section/Package/Scartcher.dart';
 import 'package:flutter_dicto/Section/Widget/Tab/Tab.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 import 'package:stacked_card_carousel/stacked_card_carousel.dart';
 
-
 class Widget_card extends StatelessWidget {
   Widget_card({Key? key}) : super(key: key);
-
 
   final List<Widget> WidgetCard = <Widget>[
     WidgetCards(
       color: Color(0xFFffd22b),
       title: "Colour",
-      link:Color_view(),
+      link: Color_view(),
       image: 'assets/Widget_img/Colorhex.jpeg',
     ),
     WidgetCards(
@@ -29,16 +27,16 @@ class Widget_card extends StatelessWidget {
       link: Grid_count(),
       image: 'assets/Widget_img/Grid.jpeg',
     ),
-  WidgetCards(
+    WidgetCards(
       color: Color(0xFFff8503),
       title: "Expansion Text",
-      link:Expansion_card(),
+      link: Expansion_card(),
       image: 'assets/Widget_img/Expan1.jpeg',
     ),
     WidgetCards(
       color: Color(0xFFd53600),
       title: "Tab",
-      link:Tab_view1(),
+      link: Tab_view1(),
       image: 'assets/Widget_img/Tab.jpeg',
     ),
     WidgetCards(
@@ -47,12 +45,12 @@ class Widget_card extends StatelessWidget {
       link: List1(),
       image: 'assets/Widget_img/ListTile.jpeg',
     ),
-    WidgetCards(
-      color: Color(0xFF7e261a),
-      title: "Play with your cat!",
-      link: ScratcherCard(),
-      image: 'assets/images/image1.gif',
-    ),
+    // WidgetCards(
+    //   color: Color(0xFF7e261a),
+    //   title: "Scratcher",
+    //   link: ScratcherCard(),
+    //   image: 'assets/images/image1.gif',
+    // ),
     // ImageCards(
     //   color: Color(0xFF7e261a),
     //   title: "Play with your cat!",
@@ -63,8 +61,8 @@ class Widget_card extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double H= ScreenSize.Height(context);
-    double W= ScreenSize.Height(context);
+    double H = ScreenSize.Height(context);
+    double W = ScreenSize.Height(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFC69749),
@@ -72,19 +70,13 @@ class Widget_card extends StatelessWidget {
           'Widget viwer',
         ),
         leading: IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.pushAndRemoveUntil(
                 context,
-                MaterialPageRoute(
-                    builder: (context)=>MyHomePage()
-
-                ),
-                    (route)=>false
-            );
+                MaterialPageRoute(builder: (context) => MyHomePage()),
+                (route) => false);
           },
-          icon: Icon(
-              Icons.arrow_back
-          ),
+          icon: Icon(Icons.arrow_back),
         ),
       ),
       body: ListView(
@@ -110,8 +102,9 @@ class WidgetCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double H= ScreenSize.Height(context);
-    double W= ScreenSize.Height(context);    return Container(
+    double H = ScreenSize.Height(context);
+    double W = ScreenSize.Height(context);
+    return Container(
       margin: EdgeInsets.all(20.0),
       child: InkWell(
         onTap: () {
@@ -119,40 +112,34 @@ class WidgetCards extends StatelessWidget {
             MaterialPageRoute(
               builder: (context) => link,
             ),
-                (route) => false /* No Back option */,
+            (route) => false /* No Back option */,
           );
         },
         child: Stack(
           children: <Widget>[
             Container(
               alignment: AlignmentDirectional.center,
-
               color: color,
-              height: H/3,
-              width:W,
-              child:  Image.asset(
+              height: H / 3,
+              width: W,
+              child: Image.asset(
                 '$image',
                 fit: BoxFit.fitHeight,
-
               ),
-
             ),
             Positioned(
-
                 child: Container(
-                  color: Colors.black45,
-
-                  child: Center(
-                    child: Text('$title',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold
-                      ),),
-                  ),
-                )
-            ),
-
+              color: Colors.black45,
+              child: Center(
+                child: Text(
+                  '$title',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+            )),
           ],
         ),
       ),

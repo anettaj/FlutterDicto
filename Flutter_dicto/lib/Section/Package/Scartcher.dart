@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dicto/Section/Package_view.dart';
 import 'package:scratcher/scratcher.dart';
 
 class ScratcherCard extends StatefulWidget {
@@ -23,6 +24,18 @@ class _ScratcherCardState extends State<ScratcherCard> {
     final scratchKey = GlobalKey<ScratcherState>();
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Scratcher Package'),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => Package_view()),
+                (route) => false);
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
