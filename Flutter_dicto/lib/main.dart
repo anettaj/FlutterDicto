@@ -1,5 +1,6 @@
 import 'package:flutter_dicto/Section/Api_view.dart';
 import 'package:flutter_dicto/Section/Form_view.dart';
+import 'package:flutter_dicto/Section/Package_view.dart';
 import 'package:stacked_card_carousel/stacked_card_carousel.dart';
 import 'package:flutter_dicto/Section/Pdf/Pdf_viewer.dart';
 import 'package:flutter_dicto/Section/Image_view.dart';
@@ -8,7 +9,6 @@ import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter/material.dart';
 import 'Section/WebView/WebView.dart';
 import 'Section/Widget_view.dart';
-
 
 void main() => runApp(MyApp());
 
@@ -29,7 +29,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
 
-
   final List<Widget> fancyCards = <Widget>[
     FancyCard(
       title: "Image View",
@@ -37,7 +36,7 @@ class MyHomePage extends StatelessWidget {
     ),
     FancyCard(
       title: "Menu view",
-      link:Menu_view(),
+      link: Menu_view(),
     ),
     FancyCard(
       title: "Widget view",
@@ -45,7 +44,7 @@ class MyHomePage extends StatelessWidget {
     ),
     FancyCard(
       title: "API view",
-      link:  Api_view(),
+      link: Api_view(),
     ),
     FancyCard(
       title: "Contact view",
@@ -59,6 +58,10 @@ class MyHomePage extends StatelessWidget {
       title: "PDF Viewer",
       link: Pdf_viewer(),
     ),
+    FancyCard(
+      title: "Package view",
+      link: Package_view(),
+    ),
     // FancyCard(
     //   title: "ExpansionTile",
     //   link: Expansion_card(),
@@ -67,13 +70,12 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double H= ScreenSize.Height(context);
-    double W= ScreenSize.Height(context);    return Scaffold(
+    double H = ScreenSize.Height(context);
+    double W = ScreenSize.Height(context);
+    return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFC69749),
-        title: Text(
-          'Flutter Dicto'
-        ),
+        title: Text('Flutter Dicto'),
       ),
       body: StackedCardCarousel(
         items: fancyCards,
@@ -90,15 +92,13 @@ class FancyCard extends StatelessWidget {
   }) : super(key: key);
 
   final String title;
-  final Widget  link;
-
+  final Widget link;
 
   @override
   Widget build(BuildContext context) {
     double H = MediaQuery.of(context).size.height;
     double W = MediaQuery.of(context).size.width;
     return Container(
-
       margin: EdgeInsets.all(5.0),
       child: InkWell(
         onTap: () {

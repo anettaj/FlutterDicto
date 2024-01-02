@@ -47,6 +47,7 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^23.2.4
   webview_flutter: ^4.4.2
   scratcher: ^2.5.0
+  gap: ^3.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter
