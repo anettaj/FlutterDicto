@@ -72,7 +72,7 @@ flutter:
   assets:
     - assets/images/
     - assets/Widget_img/
-    - assets/Form/
+    - assets/Templates/
     - assets/
     - assets/Package/
 #     - images/a_dot_ham.jpeg

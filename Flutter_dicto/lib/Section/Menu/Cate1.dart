@@ -63,18 +63,44 @@ class Cate1 extends StatelessWidget {
               child: Container(
                 padding: EdgeInsets.all(20.0),
                 color: Colors.white,
-                child: Text('''Column(
-                 mainAxisAlignment: MainAxisAlignment.center,
-                 children: [
-                SizedBox(height: 15),
-                Text(
-                  category.name,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: selectedIndex == index ? 25 : 20,
-                  ),
-                ),
-                ])
+                child: Text('''
+          Column(
+          children: [
+            Center(
+              child: ScaledList(
+                itemCount: categories.length,
+                itemColor: (index) {
+                  return kMixedColors[index % kMixedColors.length];
+                },
+                itemBuilder: (index, selectedIndex) {
+                  final category = categories[index];
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => category.link(),
+                          ));
+                        },
+                        child:
+                      Container(
+                        height: selectedIndex == index ? 100 : 80,
+                      ),
+                      ),
+                      SizedBox(height: 15),
+                      Text(
+                        category.name,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: selectedIndex == index ? 25 : 20,
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
 
 
 
