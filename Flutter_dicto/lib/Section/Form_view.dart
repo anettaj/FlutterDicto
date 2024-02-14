@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dicto/Section/Form/Login_page.dart';
+import 'package:flutter_dicto/Section/Templates/Login_page.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 
-import 'Form/Contact_us1.dart';
+import 'Templates/Contact_us1.dart';
+import 'Templates/Netflix_design.dart';
 
 
 
@@ -16,20 +17,20 @@ class Form_view extends StatelessWidget {
       color: Color(0xFFffd22b),
       title: "Contact with controlers",
       link: Contact1(),
-      image: 'assets/Widget_img/contact1.jpeg',
+      image: 'assets/Templates/contact1.jpeg',
     ),
     FormCards(
       color: Color(0xFFffd22b),
       title: "Login with controlers",
       link: Login_page(),
-      image: 'assets/Form/login1.jpeg',
+      image: 'assets/Templates/login1.jpeg',
     ),
-    // ApiCards(
-    //   color: Color(0xFFff8503),
-    //   title: "Api Write",
-    //   link:ApiWrite(),
-    //   image: 'assets/images/image1.gif',
-    // ),
+    FormCards(
+      color: Color(0xFFff8503),
+      title: "Netflix gradiant",
+      link:Netflix_design(),
+      image: 'assets/Templates/Netflix_design.jpeg',
+    ),
     // ImageCards(
     //   color: Color(0xFFd53600),
     //   title: "Try teleportation!",
