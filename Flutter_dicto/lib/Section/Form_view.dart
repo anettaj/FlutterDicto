@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dicto/Section/Templates/Login_page.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
-
 import 'Templates/Contact_us1.dart';
 import 'Templates/Netflix_design.dart';
 
@@ -31,11 +30,11 @@ class Form_view extends StatelessWidget {
       link:Netflix_design(),
       image: 'assets/Templates/Netflix_design.jpeg',
     ),
-    // ImageCards(
+    // FormCards(
     //   color: Color(0xFFd53600),
-    //   title: "Try teleportation!",
-    //   link: () => Image2(),
-    //   image: 'assets/images/image1.gif',
+    //   title: "day_night_switch.dart",
+    //   link: DynamicTheme(),
+    //   image: 'assets/Templates/DayNight.gif',
     // ),
     // ImageCards(
     //   color: Color(0xFF700e01),
@@ -59,7 +58,7 @@ class Form_view extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFFC69749),
         title: const Text(
-          'Contact_us',
+          'Template',
         ),
         leading: IconButton(
           onPressed: (){
