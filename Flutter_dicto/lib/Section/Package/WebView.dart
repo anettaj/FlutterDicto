@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
+import 'package:flutter_dicto/Section/Package_view.dart';
 class WebViewExample extends StatefulWidget {
   const WebViewExample({super.key});
 
@@ -34,7 +34,18 @@ class _WebViewExampleState extends State<WebViewExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Flutter Simple Example')),
+      appBar: AppBar(
+        title: const Text('Scratcher Package'),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => Package_view()),
+                    (route) => false);
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
+      ),
       body: WebViewWidget(controller: controller),
     );
   }
