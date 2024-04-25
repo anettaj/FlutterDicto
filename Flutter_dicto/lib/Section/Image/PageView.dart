@@ -20,7 +20,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('Image Slider'),
+          title: const Text('Image Slider'),
           leading: IconButton(
             onPressed: () {
               Navigator.pushAndRemoveUntil(
@@ -28,7 +28,7 @@ class _PageViewWidgetState extends State<PageViewWidget> {
                   MaterialPageRoute(builder: (context) => Image_view()),
                       (route) => false);
             },
-            icon: Icon(Icons.arrow_back),
+            icon: const Icon(Icons.arrow_back),
           ),
         ),
       body:Column(
@@ -39,12 +39,12 @@ class _PageViewWidgetState extends State<PageViewWidget> {
           child:PageView(
 
             scrollDirection: Axis.horizontal,
-            children: featuredGames.map((_game){
+            children: featuredGames.map((game){
               return Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: NetworkImage(_game.coverImage.url)
+                          image: NetworkImage(game.coverImage.url)
                       )
                   ));
             }).toList(),)

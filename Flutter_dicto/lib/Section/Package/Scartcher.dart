@@ -3,7 +3,7 @@ import 'package:flutter_dicto/Section/Package_view.dart';
 import 'package:scratcher/scratcher.dart';
 
 class ScratcherCard extends StatefulWidget {
-  const ScratcherCard({Key? key});
+  const ScratcherCard({super.key});
 
   @override
   State<ScratcherCard> createState() => _ScratcherCardState();
@@ -25,7 +25,7 @@ class _ScratcherCardState extends State<ScratcherCard> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Scratcher Package'),
+        title: const Text('Scratcher Package'),
         leading: IconButton(
           onPressed: () {
             Navigator.pushAndRemoveUntil(
@@ -33,7 +33,7 @@ class _ScratcherCardState extends State<ScratcherCard> {
                 MaterialPageRoute(builder: (context) => Package_view()),
                 (route) => false);
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: Column(
@@ -52,7 +52,7 @@ class _ScratcherCardState extends State<ScratcherCard> {
                     child: Container(
                       height: MediaQuery.of(context).size.height * 0.4,
                       width: MediaQuery.of(context).size.width * 0.7,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         image: DecorationImage(
                           image: AssetImage('assets/Santa.gif'),
                           fit: BoxFit.fill,
@@ -63,7 +63,7 @@ class _ScratcherCardState extends State<ScratcherCard> {
                   Center(
                     child: Text(
                       '$value',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -102,25 +102,25 @@ class _ScratcherCardState extends State<ScratcherCard> {
                     // Update the value variable only when the "Load" button is pressed
                     value = textController.text;
                     scratchKey.currentState?.reset(
-                      duration: Duration(milliseconds: 200),
+                      duration: const Duration(milliseconds: 200),
                     );
 
                     // Clear the text in the TextField
                     textController.clear();
                   });
                 },
-                child: Text(
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    const EdgeInsets.all(20),
+                  ),
+                  backgroundColor: MaterialStateProperty.all(Colors.amber),
+                ),
+                child: const Text(
                   'Load',
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
                   ),
-                ),
-                style: ButtonStyle(
-                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                    EdgeInsets.all(20),
-                  ),
-                  backgroundColor: MaterialStateProperty.all(Colors.amber),
                 ),
               )
             ],

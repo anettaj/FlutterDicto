@@ -4,7 +4,7 @@ import '../Form_view.dart';
 //import 'package:login/auth_controller.dart';
 
 class Login_page extends StatelessWidget {
-  const Login_page({Key? key}) : super(key: key);
+  const Login_page({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,8 @@ class Login_page extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xFFC69749),
-        title: Text(
+        backgroundColor: const Color(0xFFC69749),
+        title: const Text(
           'Login page',
         ),
         leading: IconButton(
@@ -30,7 +30,7 @@ class Login_page extends StatelessWidget {
                     (route)=>false
             );
           },
-          icon: Icon(
+          icon: const Icon(
               Icons.arrow_back
           ),
         ),
@@ -42,7 +42,7 @@ class Login_page extends StatelessWidget {
             Container(
               width: w,
               height: h*0.3,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/Form/login.png'),
                   fit: BoxFit.cover,
@@ -51,25 +51,25 @@ class Login_page extends StatelessWidget {
             ),
             Container(
 
-              margin: EdgeInsets.all(20.0),
+              margin: const EdgeInsets.all(20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Hello',
+                  const Text('Hello',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 50.0,
                     ),
                     textAlign: TextAlign.left,
                   ),
-                  Text('Sign into your account',
+                  const Text('Sign into your account',
                     style: TextStyle(
                       color: Colors.grey,
                     ),
                   ),
-                  SizedBox(height: 50.0,),
-                  Text('Email'),
+                  const SizedBox(height: 50.0,),
+                  const Text('Email'),
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -77,7 +77,7 @@ class Login_page extends StatelessWidget {
                         BoxShadow(
                           blurRadius: 10,
                           spreadRadius: 7,
-                          offset: Offset(1,1),
+                          offset: const Offset(1,1),
                           color: Colors.grey.withOpacity(0.2),
                         ),
                       ],
@@ -87,14 +87,14 @@ class Login_page extends StatelessWidget {
                       controller: emailController,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.white,
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                                 color: Colors.white,
                                 width: 1.0
                             ),
@@ -107,8 +107,8 @@ class Login_page extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20.0,),
-                  Text('Password'),
+                  const SizedBox(height: 20.0,),
+                  const Text('Password'),
                   Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -116,7 +116,7 @@ class Login_page extends StatelessWidget {
                         BoxShadow(
                           blurRadius: 10,
                           spreadRadius: 7,
-                          offset: Offset(1,1),
+                          offset: const Offset(1,1),
                           color: Colors.grey.withOpacity(0.2),
                         ),
                       ],
@@ -126,14 +126,14 @@ class Login_page extends StatelessWidget {
                       controller: passwordController,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.white,
                             width: 1.0,
                           ),
                           borderRadius: BorderRadius.circular(30.0),
                         ),
                         enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                                 color: Colors.white,
                                 width: 1.0
                             ),
@@ -146,7 +146,7 @@ class Login_page extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text('Forgot your Password?',
@@ -165,13 +165,13 @@ class Login_page extends StatelessWidget {
                         },
                         child: Container(
 
-                          padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                          padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
                           decoration: BoxDecoration(
 
                             borderRadius: BorderRadius.circular(20.0),
                             color: Colors.indigo[900],
                           ),
-                          child:Text('Sign in',
+                          child:const Text('Sign in',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,

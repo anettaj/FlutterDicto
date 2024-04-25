@@ -13,10 +13,10 @@ class Tab_view1 extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(120), // Set the preferred height
+          preferredSize: const Size.fromHeight(120), // Set the preferred height
           child: AppBar(
-            backgroundColor: Color(0xFFC69749),
-            title: Text('Tab bar'),
+            backgroundColor: const Color(0xFFC69749),
+            title: const Text('Tab bar'),
             leading: IconButton(
               onPressed: (){
                 Navigator.pushAndRemoveUntil(
@@ -28,18 +28,18 @@ class Tab_view1 extends StatelessWidget {
                         (route)=>false
                 );
               },
-              icon: Icon(
+              icon: const Icon(
                   Icons.arrow_back
               ),
             ),
 
             bottom: PreferredSize(
-              preferredSize: Size.fromHeight(90), // Set the preferred height of TabBar
+              preferredSize: const Size.fromHeight(90), // Set the preferred height of TabBar
               child: Container(
                 color: Colors.white,
 
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 20),
+                child: const Padding(
+                  padding: EdgeInsets.only(top: 20),
                   child: TabBar(
                     indicatorWeight: 20,
                     labelColor: Color(0xFFC69749),
@@ -62,7 +62,7 @@ class Tab_view1 extends StatelessWidget {
             ),
           ),
         ),
-        body: TabBarView(
+        body: const TabBarView(
           children: [
             Tab1(),
             Tab2(),

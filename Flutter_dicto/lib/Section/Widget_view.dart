@@ -1,45 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dicto/Section/Image/Image1.dart';
-import 'package:flutter_dicto/Section/Image/Image2.dart';
 import 'package:flutter_dicto/Section/Widget/Color/Color.dart';
 import 'package:flutter_dicto/Section/Widget/ExpansionText/Expansion_card.dart';
 import 'package:flutter_dicto/Section/Widget/Grid/Grid_count.dart';
 import 'package:flutter_dicto/Section/Widget/ListTile/List_view_listtile.dart';
-import 'package:flutter_dicto/Section/Package/Scartcher.dart';
 import 'package:flutter_dicto/Section/Widget/Tab/Tab.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
-import 'package:stacked_card_carousel/stacked_card_carousel.dart';
 
 class Widget_card extends StatelessWidget {
-  Widget_card({Key? key}) : super(key: key);
+  Widget_card({super.key});
 
   final List<Widget> WidgetCard = <Widget>[
-    WidgetCards(
+    const WidgetCards(
       color: Color(0xFFffd22b),
       title: "Colour",
       link: Color_view(),
       image: 'assets/Widget_img/Colorhex.jpeg',
     ),
-    WidgetCards(
+    const WidgetCards(
       color: Color(0xFFfeb204),
       title: "Gird",
       link: Grid_count(),
       image: 'assets/Widget_img/Grid.jpeg',
     ),
-    WidgetCards(
+    const WidgetCards(
       color: Color(0xFFff8503),
       title: "Expansion Text",
       link: Expansion_card(),
       image: 'assets/Widget_img/Expan1.jpeg',
     ),
-    WidgetCards(
+    const WidgetCards(
       color: Color(0xFFd53600),
       title: "Tab",
       link: Tab_view1(),
       image: 'assets/Widget_img/Tab.jpeg',
     ),
-    WidgetCards(
+    const WidgetCards(
       color: Color(0xFFd53600),
       title: "ListTile",
       link: List1(),
@@ -65,8 +61,8 @@ class Widget_card extends StatelessWidget {
     double W = ScreenSize.Height(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFC69749),
-        title: Text(
+        backgroundColor: const Color(0xFFC69749),
+        title: const Text(
           'Widget viwer',
         ),
         leading: IconButton(
@@ -76,7 +72,7 @@ class Widget_card extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => MyHomePage()),
                 (route) => false);
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: ListView(
@@ -88,12 +84,12 @@ class Widget_card extends StatelessWidget {
 
 class WidgetCards extends StatelessWidget {
   const WidgetCards({
-    Key? key,
+    super.key,
     required this.color,
     required this.title,
     required this.link,
     required this.image,
-  }) : super(key: key);
+  });
 
   final String title;
   final Widget link;
@@ -105,7 +101,7 @@ class WidgetCards extends StatelessWidget {
     double H = ScreenSize.Height(context);
     double W = ScreenSize.Height(context);
     return Container(
-      margin: EdgeInsets.all(20.0),
+      margin: const EdgeInsets.all(20.0),
       child: InkWell(
         onTap: () {
           Navigator.of(context).pushAndRemoveUntil(
@@ -123,7 +119,7 @@ class WidgetCards extends StatelessWidget {
               height: H / 3,
               width: W,
               child: Image.asset(
-                '$image',
+                image,
                 fit: BoxFit.fitHeight,
               ),
             ),
@@ -132,8 +128,8 @@ class WidgetCards extends StatelessWidget {
               color: Colors.black45,
               child: Center(
                 child: Text(
-                  '$title',
-                  style: TextStyle(
+                  title,
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.bold),

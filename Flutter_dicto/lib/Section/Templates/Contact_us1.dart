@@ -9,15 +9,15 @@ class Contact1 extends StatelessWidget {
 
     @override
     Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
       var emailController=TextEditingController();
       var nameController=TextEditingController();
       var messageController=TextEditingController();
       var subjectController=TextEditingController();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFC69749),
-        title: Text(
+        backgroundColor: const Color(0xFFC69749),
+        title: const Text(
           'Contact us1',
         ),
         leading: IconButton(
@@ -31,7 +31,7 @@ class Contact1 extends StatelessWidget {
                     (route)=>false
             );
           },
-          icon: Icon(
+          icon: const Icon(
               Icons.arrow_back
           ),
         ),
@@ -41,15 +41,15 @@ class Contact1 extends StatelessWidget {
 
         body: Container(
 
-          margin: EdgeInsets.all(20),
+          margin: const EdgeInsets.all(20),
           child: Column(
             children: [
 
 
               Container(
-                margin: EdgeInsets.only(top: 30, bottom: 20),
+                margin: const EdgeInsets.only(top: 30, bottom: 20),
                 alignment: Alignment.centerLeft,
-                child: Text(
+                child: const Text(
                   'Leave Your Message',
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
@@ -62,7 +62,7 @@ class Contact1 extends StatelessWidget {
                 flex: 1,
                 child: Container(
                   child: Form(
-                    key: _formKey,
+                    key: formKey,
                     child: ListView(
                       children: [
                         //name-start
@@ -71,10 +71,10 @@ class Contact1 extends StatelessWidget {
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)),
-                              label: Text('Your Name')),
+                              label: const Text('Your Name')),
                         ),
                         //name-end
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         //email-start
@@ -83,10 +83,10 @@ class Contact1 extends StatelessWidget {
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)),
-                              label: Text('Your Email Id')),
+                              label: const Text('Your Email Id')),
                         ),
                         //email-end
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         //subject-start
@@ -96,10 +96,10 @@ class Contact1 extends StatelessWidget {
                           decoration: InputDecoration(
                               border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10)),
-                              label: Text('Your Subject')),
+                              label: const Text('Your Subject')),
                         ),
                         //subject-end
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         //message-start
@@ -108,25 +108,25 @@ class Contact1 extends StatelessWidget {
                           decoration: InputDecoration(
                             floatingLabelAlignment:
                             FloatingLabelAlignment.start,
-                            contentPadding: EdgeInsets.only(
+                            contentPadding: const EdgeInsets.only(
                                 top: 0, left: 10, bottom: 90),
                             alignLabelWithHint: true,
                             border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10)),
-                            label: Text(
+                            label: const Text(
                               'Your Message',
                               //textAlign: TextAlign.start,
                             ),
                           ),
                         ),
                         //message-end
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         FilledButton(
                           onPressed: () {
-                            if (_formKey.currentState != null &&
-                                _formKey.currentState!.validate()) {
+                            if (formKey.currentState != null &&
+                                formKey.currentState!.validate()) {
                               // Form is valid, get the form data
                               String name = nameController.text;
                               String email = emailController.text;
@@ -140,14 +140,14 @@ class Contact1 extends StatelessWidget {
                                   context: context,
                                   builder: (BuildContext context) {
                                     return AlertDialog(
-                                      title: Text('Error'),
-                                      content: Text('Please fill all the fields.'),
+                                      title: const Text('Error'),
+                                      content: const Text('Please fill all the fields.'),
                                       actions: [
                                         TextButton(
                                           onPressed: () {
                                             Navigator.pop(context);
                                           },
-                                          child: Text('OK'),
+                                          child: const Text('OK'),
                                         ),
                                       ],
                                     );
@@ -159,17 +159,17 @@ class Contact1 extends StatelessWidget {
                               }
                             }
                           },
-                          child: Text(
-                            'Submit',
-                            style: TextStyle(fontSize: 18),
-                          ),
                           style: ButtonStyle(
                             padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                                EdgeInsets.all(15)),
+                                const EdgeInsets.all(15)),
                             backgroundColor: MaterialStateProperty.all<Color>(
-                                Color(0xFF252493)),
+                                const Color(0xFF252493)),
                             minimumSize:
-                            MaterialStateProperty.all<Size>(Size(10, 10)),
+                            MaterialStateProperty.all<Size>(const Size(10, 10)),
+                          ),
+                          child: const Text(
+                            'Submit',
+                            style: TextStyle(fontSize: 18),
                           ),
                         )
 

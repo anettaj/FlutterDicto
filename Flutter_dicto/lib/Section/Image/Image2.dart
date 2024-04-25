@@ -12,7 +12,7 @@ class Image2 extends StatelessWidget {
     double W = ScreenSize.Width(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Image Slider'),
+        title: const Text('Image Slider'),
         leading: IconButton(
           onPressed: () {
             Navigator.pushAndRemoveUntil(
@@ -20,13 +20,13 @@ class Image2 extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => Image_view()),
                 (route) => false);
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               width: W,
               height: H / 2,
               child: ImageSlideshow(
@@ -48,15 +48,15 @@ class Image2 extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 color: Colors.white,
-                child: Text('''
+                child: const Text('''
             Container(
               width: W,
               height: H/2,
@@ -87,7 +87,7 @@ class Image2 extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Container(
+              child: SizedBox(
                 height: H * 0.23,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
@@ -113,9 +113,9 @@ class Image2 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 color: Colors.white,
-                child: Text('''
+                child: const Text('''
             Container(
                 height: H * 0.23,
                 child: ClipRRect(

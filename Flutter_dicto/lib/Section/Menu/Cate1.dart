@@ -3,13 +3,13 @@ import 'package:flutter_dicto/Section/Menu_view.dart';
 import 'package:scaled_list/scaled_list.dart';
 
 class Cate1 extends StatelessWidget {
-  Cate1({Key? key}) : super(key: key);
+  Cate1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Category 1'),
+        title: const Text('Category 1'),
         leading: IconButton(
           onPressed: () {
             Navigator.pushAndRemoveUntil(
@@ -17,7 +17,7 @@ class Cate1 extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => Menu_view()),
                 (route) => false);
           },
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
         ),
       ),
       body: SingleChildScrollView(
@@ -45,7 +45,7 @@ class Cate1 extends StatelessWidget {
                         height: selectedIndex == index ? 100 : 80,
                       ),
                       // ),
-                      SizedBox(height: 15),
+                      const SizedBox(height: 15),
                       Text(
                         category.name,
                         style: TextStyle(
@@ -61,9 +61,9 @@ class Cate1 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(20.0),
               child: Container(
-                padding: EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
                 color: Colors.white,
-                child: Text('''
+                child: const Text('''
           Column(
           children: [
             Center(
@@ -146,13 +146,13 @@ class Category {
   }
 
   final List<Color> kMixedColors = [
-    Color(0xff71A5D7),
-    Color(0xff72CCD4),
-    Color(0xffFBAB57),
-    Color(0xffF8B993),
-    Color(0xff962D17),
-    Color(0xffc657fb),
-    Color(0xfffb8457),
+    const Color(0xff71A5D7),
+    const Color(0xff72CCD4),
+    const Color(0xffFBAB57),
+    const Color(0xffF8B993),
+    const Color(0xff962D17),
+    const Color(0xffc657fb),
+    const Color(0xfffb8457),
   ];
 
   final List<Category> categories = [
@@ -173,5 +173,5 @@ class Category {
 class Category {
   final String name;
 
-  Category({required this.name}) {}
+  Category({required this.name});
 }

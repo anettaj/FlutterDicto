@@ -9,8 +9,8 @@ class Color_view extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFC69749),
-        title: Text(
+        backgroundColor: const Color(0xFFC69749),
+        title: const Text(
           'Color',
         ),
         leading: IconButton(
@@ -24,14 +24,14 @@ class Color_view extends StatelessWidget {
                     (route)=>false
             );
           },
-          icon: Icon(
+          icon: const Icon(
               Icons.arrow_back
           ),
         ),
       ),
       body: Container(
         alignment: AlignmentDirectional.center,
-        child: Text('Color(0xFF252493)',
+        child: const Text('Color(0xFF252493)',
         style: TextStyle(
           fontSize: 25,
           color: Colors.white,

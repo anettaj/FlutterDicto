@@ -12,8 +12,8 @@ class List1 extends StatelessWidget {
     double W= ScreenSize.Height(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFC69749),
-        title: Text(
+        backgroundColor: const Color(0xFFC69749),
+        title: const Text(
           'ListTile',
         ),
         leading: IconButton(
@@ -27,21 +27,21 @@ class List1 extends StatelessWidget {
                     (route)=>false
             );
           },
-          icon: Icon(
+          icon: const Icon(
               Icons.arrow_back
           ),
         ),
       ),
       body:  Container(
 
-        margin: EdgeInsets.all(20),
-        padding: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(10),
         height: H*0.35,
         decoration: BoxDecoration(
             color: Colors.grey,
           borderRadius: BorderRadius.circular(10)
         ),
-        child: Column(
+        child: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Title',

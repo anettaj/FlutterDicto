@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../main.dart';
 import '../Api_view.dart';
 
 class ApiWrite extends StatelessWidget {
@@ -10,8 +9,8 @@ class ApiWrite extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFC69749),
-        title: Text(
+        backgroundColor: const Color(0xFFC69749),
+        title: const Text(
           'Api Write',
         ),
         leading: IconButton(
@@ -25,7 +24,7 @@ class ApiWrite extends StatelessWidget {
                     (route)=>false
             );
           },
-          icon: Icon(
+          icon: const Icon(
               Icons.arrow_back
           ),
         ),
@@ -34,8 +33,8 @@ class ApiWrite extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
           child: Container(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
+            child: const Padding(
+              padding: EdgeInsets.all(10.0),
               child: Text(
                   '''
 import 'package:flutter/material.dart';

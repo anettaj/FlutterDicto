@@ -2,24 +2,24 @@ import 'package:flutter_dicto/Section/Api_view.dart';
 import 'package:flutter_dicto/Section/Form_view.dart';
 import 'package:flutter_dicto/Section/Package_view.dart';
 import 'package:stacked_card_carousel/stacked_card_carousel.dart';
-import 'package:flutter_dicto/Section/Package/Pdf_viewer.dart';
 import 'package:flutter_dicto/Section/Image_view.dart';
 import 'package:flutter_dicto/Section/Menu_view.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter/material.dart';
-import 'Section/Package/WebView.dart';
 import 'Section/Widget_view.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Dictionary',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
-        scaffoldBackgroundColor: Color(0xFF2C3333),
+        scaffoldBackgroundColor: const Color(0xFF2C3333),
       ),
       home: MyHomePage(),
     );
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key? key}) : super(key: key);
+  MyHomePage({super.key});
 
   final List<Widget> fancyCards = <Widget>[
     FancyCard(
@@ -75,8 +75,8 @@ class MyHomePage extends StatelessWidget {
     double W = ScreenSize.Height(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFC69749),
-        title: Text('Flutter Dicto'),
+        backgroundColor: const Color(0xFFC69749),
+        title: const Text('Flutter Dicto'),
       ),
       body: StackedCardCarousel(
         items: fancyCards,
@@ -87,10 +87,10 @@ class MyHomePage extends StatelessWidget {
 
 class FancyCard extends StatelessWidget {
   const FancyCard({
-    Key? key,
+    super.key,
     required this.title,
     required this.link,
-  }) : super(key: key);
+  });
 
   final String title;
   final Widget link;
@@ -100,7 +100,7 @@ class FancyCard extends StatelessWidget {
     double H = MediaQuery.of(context).size.height;
     double W = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.only(left: 8, right: 8, bottom: 8),
+      margin: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
       child: InkWell(
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(
@@ -121,7 +121,7 @@ class FancyCard extends StatelessWidget {
               child: Center(
                 child: Text(
                   title,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ),
             ),
