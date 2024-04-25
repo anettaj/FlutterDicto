@@ -4,6 +4,7 @@ import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 
 import 'Templates/Contact_us1.dart';
+import 'Templates/Netflix_design.dart';
 
 
 
@@ -24,12 +25,12 @@ class Form_view extends StatelessWidget {
       link: Login_page(),
       image: 'assets/Templates/login1.jpeg',
     ),
-    // FormCards(
-    //   color: Color(0xFFff8503),
-    //   title: "Netflix gradiant",
-    //   link:Netflix_design(),
-    //   image: 'assets/Templates/Netflix_design.jpeg',
-    // ),
+    FormCards(
+      color: Color(0xFFff8503),
+      title: "Netflix gradiant",
+      link:Netflix_design(),
+      image: 'assets/Templates/Netflix_design.jpeg',
+    ),
     // ImageCards(
     //   color: Color(0xFFd53600),
     //   title: "Try teleportation!",
