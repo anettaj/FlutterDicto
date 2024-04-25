@@ -48,6 +48,7 @@ dependencies:
   scratcher: ^2.5.0
   gap: ^3.0.1
   day_night_switch: ^1.0.4
+  widget_and_text_animator: ^1.1.5
 
 dev_dependencies:
   flutter_test:
@@ -77,7 +78,7 @@ flutter:
     - assets/Templates/
     - assets/
     - assets/Package/
-    - assets/Templates/DayNight/
+    - assets/Package/DayNight/
 #     - images/a_dot_ham.jpeg
 
 # An image asset can refer to one or more resolution-specific "variants", see

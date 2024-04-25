@@ -2,14 +2,14 @@ import 'package:day_night_switch/day_night_switch.dart';
 import 'package:flutter/material.dart';
 import '../Form_view.dart';
 
-class DynamicTheme extends StatefulWidget {
-  const DynamicTheme({super.key});
+class DayAndNight extends StatefulWidget {
+  const DayAndNight({super.key});
 
   @override
-  State<DynamicTheme> createState() => _DynamicThemeState();
+  State<DayAndNight> createState() => _DayAndNightState();
 }
 
-class _DynamicThemeState extends State<DynamicTheme> {
+class _DayAndNightState extends State<DayAndNight> {
   bool val=false;
   Color sunColor=Colors.amber;
   Color dayColor=Color(0xff85cbe8);
@@ -48,16 +48,16 @@ class _DynamicThemeState extends State<DynamicTheme> {
       body: Container(
         decoration: BoxDecoration(
           image:DecorationImage(
-              image: val? AssetImage('assets/Templates/DayNight/night.png')
-                  :AssetImage('assets/Templates/DayNight/day.png'),
+              image: val? AssetImage('assets/Package/DayNight/night.png')
+                  :AssetImage('assets/Package/DayNight/day.png'),
             fit: BoxFit.fill
           )
         ),
         child: Center(
           child: DayNightSwitch(
             value: val,
-            moonImage: AssetImage('assets/Templates/DayNight/moon.png'),
-            sunImage: AssetImage('assets/Templates/DayNight/cloud.png'),
+            moonImage: AssetImage('assets/Package/DayNight/moon.png'),
+            sunImage: AssetImage('assets/Package/DayNight/cloud.png'),
             sunColor: sunColor,
             moonColor: moonColor,
             dayColor: dayColor,

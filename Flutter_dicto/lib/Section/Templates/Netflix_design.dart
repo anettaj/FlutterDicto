@@ -25,7 +25,7 @@ class _Netflix_designState extends State<Netflix_design> {
       appBar: AppBar(
         backgroundColor: const Color(0xFFC69749),
         title: const Text(
-          'Contact us1',
+          'Netflix Gradiant',
         ),
         leading: IconButton(
           onPressed: (){

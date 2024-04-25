@@ -35,7 +35,7 @@ class _WebViewExampleState extends State<WebViewExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Scratcher Package'),
+        title: const Text('Web View Package'),
         leading: IconButton(
           onPressed: () {
             Navigator.pushAndRemoveUntil(

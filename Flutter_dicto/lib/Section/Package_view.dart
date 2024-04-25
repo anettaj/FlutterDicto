@@ -4,8 +4,9 @@ import 'package:flutter_dicto/Section/Package/Scartcher.dart';
 import 'package:flutter_dicto/Section/Package/WebView.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
-import './Package/DynamicTheme.dart';
-import 'Package/DynamicTheme.dart';
+import './Package/DayAndNight.dart';
+import 'Package/Animation1.dart';
+import 'Package/DayAndNight.dart';
 
 class Package_view extends StatelessWidget {
   Package_view({super.key});
@@ -32,8 +33,14 @@ class Package_view extends StatelessWidget {
     FancyCard(
       color: Color(0xFFd53600),
       title: "day_night_switch.dart",
-      link: () =>DynamicTheme(),
-      image: 'assets/Templates/DayNight.gif',
+      link: () =>DayAndNight(),
+      image: 'assets/Package/DayNight.gif',
+    ),
+    FancyCard(
+      color:Color(0xFFffd22b),
+      title: "widget_and_text_animator.dart",
+      link: () =>Animation1(),
+      image: 'assets/Package/animation1.gif',
     ),
     // FancyCard(
     //   color: Color(0xFFd53600),
