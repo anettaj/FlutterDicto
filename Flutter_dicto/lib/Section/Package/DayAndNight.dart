@@ -12,9 +12,9 @@ class DayAndNight extends StatefulWidget {
 class _DayAndNightState extends State<DayAndNight> {
   bool val=false;
   Color sunColor=Colors.amber;
-  Color dayColor=Color(0xff85cbe8);
+  Color dayColor=const Color(0xff85cbe8);
   Color moonColor=Colors.grey;
-  Color nightColor=Color(0xff003265);
+  Color nightColor=const Color(0xff003265);
 
 
   @override
@@ -48,16 +48,16 @@ class _DayAndNightState extends State<DayAndNight> {
       body: Container(
         decoration: BoxDecoration(
           image:DecorationImage(
-              image: val? AssetImage('assets/Package/DayNight/night.png')
-                  :AssetImage('assets/Package/DayNight/day.png'),
+              image: val? const AssetImage('assets/Package/DayNight/night.png')
+                  :const AssetImage('assets/Package/DayNight/day.png'),
             fit: BoxFit.fill
           )
         ),
         child: Center(
           child: DayNightSwitch(
             value: val,
-            moonImage: AssetImage('assets/Package/DayNight/moon.png'),
-            sunImage: AssetImage('assets/Package/DayNight/cloud.png'),
+            moonImage: const AssetImage('assets/Package/DayNight/moon.png'),
+            sunImage: const AssetImage('assets/Package/DayNight/cloud.png'),
             sunColor: sunColor,
             moonColor: moonColor,
             dayColor: dayColor,

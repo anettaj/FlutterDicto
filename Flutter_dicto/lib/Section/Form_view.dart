@@ -24,7 +24,7 @@ class Form_view extends StatelessWidget {
       link: Login_page(),
       image: 'assets/Templates/login1.jpeg',
     ),
-    FormCards(
+    const FormCards(
       color: Color(0xFFff8503),
       title: "Netflix gradiant",
       link:Netflix_design(),

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:widget_and_text_animator/widget_and_text_animator.dart';
 
 import '../Package_view.dart';
@@ -36,11 +34,11 @@ class _Animation1State extends State<Animation1> {
                 width: double.infinity,
                 height: 195,
                 key: const ValueKey('d'),
-                color: Color(0xff4a7ba6),
+                color: const Color(0xff4a7ba6),
                 child: WidgetAnimator(
                   incomingEffect: WidgetTransitionEffects.incomingSlideInFromTop(
-                      duration: Duration(seconds: 1),
-                      delay: Duration(milliseconds: 2750),
+                      duration: const Duration(seconds: 1),
+                      delay: const Duration(milliseconds: 2750),
                       curve: Curves.bounceOut
                   ),
                   atRestEffect: WidgetRestingEffects.rotate(
@@ -55,22 +53,22 @@ class _Animation1State extends State<Animation1> {
               ),
               WidgetAnimator(
                 incomingEffect: WidgetTransitionEffects.incomingSlideInFromRight(
-                  duration: Duration(seconds: 1),
+                  duration: const Duration(seconds: 1),
                   curve: Curves.easeIn
                 ),
                 atRestEffect: WidgetRestingEffects.rotate(
-                  duration: Duration(seconds: 1),
+                  duration: const Duration(seconds: 1),
                   numberOfPlays: 1
                 ),
                 child: Container(
                   width: double.infinity,
                   height: 150,
-                  color: Color(0xffc9ffc7),
+                  color: const Color(0xffc9ffc7),
                 ),
               ),
 
-              RowCube(color1: Color(0xffb4b6de), color2: Color(0xffffdbdb),),
-              RowCube(color1: Color(0xfffff9d4), color2: Color(0xffffcea5),)
+              const RowCube(color1: Color(0xffb4b6de), color2: Color(0xffffdbdb),),
+              const RowCube(color1: Color(0xfffff9d4), color2: Color(0xffffcea5),)
             ],
           ),
           Positioned(
@@ -78,7 +76,7 @@ class _Animation1State extends State<Animation1> {
             top: 490,
             child: WidgetAnimator(
               incomingEffect: WidgetTransitionEffects.incomingSlideInFromTop(
-                duration: Duration(seconds: 2),
+                duration: const Duration(seconds: 2),
                 curve: Curves.easeInOutBack
               ),
               atRestEffect: WidgetRestingEffects.rotate(
@@ -90,11 +88,11 @@ class _Animation1State extends State<Animation1> {
               height: 80,
 
                 decoration: BoxDecoration(
-                    color: Color(0xffffffff),
+                    color: const Color(0xffffffff),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.black.withOpacity(0.2),
-                      offset: Offset(0, 2),
+                      offset: const Offset(0, 2),
                       blurRadius: 20,
                       spreadRadius: 0.8,
 
@@ -111,7 +109,7 @@ class _Animation1State extends State<Animation1> {
             child: TextAnimator(
             'Sample',
             atRestEffect: WidgetRestingEffects.wave(effectStrength: 5),
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 50
             ),
             incomingEffect: WidgetTransitionEffects.incomingSlideInFromTop(

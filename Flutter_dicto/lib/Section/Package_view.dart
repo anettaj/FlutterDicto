@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dicto/Section/Package/Gap_package.dart';
 import 'package:flutter_dicto/Section/Package/Scartcher.dart';
-import 'package:flutter_dicto/Section/Package/WebView.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 import './Package/DayAndNight.dart';
 import 'Package/Animation1.dart';
-import 'Package/DayAndNight.dart';
 
 class Package_view extends StatelessWidget {
   Package_view({super.key});
@@ -24,22 +22,22 @@ class Package_view extends StatelessWidget {
       link: () => const ScratcherCard(),
       image: 'assets/Package/Scratcher.gif',
     ),
+    // FancyCard(
+    //   color: const Color(0xFFff8503),
+    //   title: "webview_flutter.dart",
+    //   link: () => WebViewExample(),
+    //   image: 'assets/Package/webview_flutter.jpg',
+    // ),
     FancyCard(
-      color: const Color(0xFFff8503),
-      title: "webview_flutter.dart",
-      link: () => WebViewExample(),
-      image: 'assets/Package/webview_flutter.jpg',
-    ),
-    FancyCard(
-      color: Color(0xFFd53600),
+      color: const Color(0xFFd53600),
       title: "day_night_switch.dart",
-      link: () =>DayAndNight(),
+      link: () =>const DayAndNight(),
       image: 'assets/Package/DayNight.gif',
     ),
     FancyCard(
-      color:Color(0xFFffd22b),
+      color:const Color(0xFFffd22b),
       title: "widget_and_text_animator.dart",
-      link: () =>Animation1(),
+      link: () =>const Animation1(),
       image: 'assets/Package/animation1.gif',
     ),
     // FancyCard(
