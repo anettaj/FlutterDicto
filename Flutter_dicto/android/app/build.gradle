@@ -2,7 +2,6 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
-    id "org.jetbrains.kotlin.android"
 }
 
 def localProperties = new Properties()
@@ -18,20 +17,15 @@ if (flutterVersionCode == null) {
     flutterVersionCode = '1'
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-//apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
-
 def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
-
 android {
     namespace "com.Anet.flutter_dicto"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
-    ndkVersion "25.1.8937393"
+//    ndkVersion "25.1.8937393"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
