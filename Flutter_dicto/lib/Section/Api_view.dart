@@ -100,7 +100,8 @@ class ApiCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double H= ScreenSize.Height(context);
-    double W= ScreenSize.Height(context);    return Container(
+    double W= ScreenSize.Height(context);    
+    return Container(
       margin: const EdgeInsets.all(20.0),
       child: InkWell(
         onTap: () {
