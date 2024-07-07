@@ -65,7 +65,7 @@ class Popup_view extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFFC69749),
         title: const Text(
-          'Widget viwer',
+          'Popup viwer',
         ),
         leading: IconButton(
           onPressed: () {

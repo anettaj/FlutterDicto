@@ -7,6 +7,8 @@ import 'package:flutter_dicto/Section/Widget/Tab/Tab.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 
+import 'Widget/Tab/TabView.dart';
+
 class Widget_card extends StatelessWidget {
   Widget_card({super.key});
 
@@ -33,6 +35,12 @@ class Widget_card extends StatelessWidget {
       color: Color(0xFFd53600),
       title: "Tab",
       link: Tab_view1(),
+      image: 'assets/Widget_img/Tab.jpeg',
+    ),
+    const WidgetCards(
+      color: Color(0xFFd53600),
+      title: "Tab1",
+      link: Tab_view2(),
       image: 'assets/Widget_img/Tab.jpeg',
     ),
     const WidgetCards(

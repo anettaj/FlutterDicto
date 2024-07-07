@@ -49,6 +49,8 @@ dependencies:
   gap: ^3.0.1
   day_night_switch: ^1.0.4
   widget_and_text_animator: ^1.1.5
+  circular_menu: ^3.0.0
+  get: ^4.6.6
 
 
 dev_dependencies:
@@ -80,6 +82,7 @@ flutter:
     - assets/
     - assets/Package/
     - assets/Package/DayNight/
+    - assets/Popup/
 #     - images/a_dot_ham.jpeg
 
 # An image asset can refer to one or more resolution-specific "variants", see

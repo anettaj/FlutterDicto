@@ -6,6 +6,7 @@ import 'package:flutter_dicto/Section/Image_view.dart';
 import 'package:flutter_dicto/Section/Menu_view.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter/material.dart';
+import 'Section/Popup_view.dart';
 import 'Section/Widget_view.dart';
 
 void main() => runApp(const MyApp());
@@ -55,6 +56,11 @@ class MyHomePage extends StatelessWidget {
       title: "Readymade view",
       link: Form_view(),
     ),
+    FancyCard(
+      title: "Popup view",
+      link: Popup_view(),
+    ),
+
     // FancyCard(
     //   title: "Web view",
     //   link: WebViewExample(),
