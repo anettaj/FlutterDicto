@@ -7,6 +7,7 @@ import 'package:flutter_dicto/Section/Widget/Tab/Tab.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 
+import '../Views/Screens/Menu.dart';
 import 'Widget/Tab/TabView.dart';
 
 class Widget_card extends StatelessWidget {
@@ -77,7 +78,7 @@ class Widget_card extends StatelessWidget {
           onPressed: () {
             Navigator.pushAndRemoveUntil(
                 context,
-                MaterialPageRoute(builder: (context) => MyHomePage()),
+                MaterialPageRoute(builder: (context) => Menu()),
                 (route) => false);
           },
           icon: const Icon(Icons.arrow_back),

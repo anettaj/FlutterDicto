@@ -34,23 +34,25 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  #section view
-  stacked_card_carousel: ^0.0.4
-  #Image2
-  flutter_image_slideshow: ^0.1.6
-  #image1
-  vertical_card_pager: ^1.6.2
-  #cate1
-  scaled_list: ^2.0.0
+#  #section view
+#  stacked_card_carousel: ^0.0.4
+#  #Image2
+#  flutter_image_slideshow: ^0.1.6
+#  #image1
+#  vertical_card_pager: ^1.6.2
+#  #cate1
+#  scaled_list: ^2.0.0
   #pdf_viewer
 #  syncfusion_flutter_pdfviewer: ^25.1.41
 #  webview_flutter: ^4.4.2
-  scratcher: ^2.5.0
-  gap: ^3.0.1
-  day_night_switch: ^1.0.4
-  widget_and_text_animator: ^1.1.5
-  circular_menu: ^3.0.0
+#  scratcher: ^2.5.0
+#  gap: ^3.0.1
+#  day_night_switch: ^1.0.4
+#  widget_and_text_animator: ^1.1.5
+#  circular_menu: ^3.0.0
   get: ^4.6.6
+  easy_sidemenu: ^0.6.0
+  cloud_firestore: ^5.4.5
 
 
 dev_dependencies:

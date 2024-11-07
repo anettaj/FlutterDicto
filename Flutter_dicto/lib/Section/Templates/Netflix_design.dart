@@ -27,21 +27,6 @@ class _Netflix_designState extends State<Netflix_design> {
         title: const Text(
           'Netflix Gradiant',
         ),
-        leading: IconButton(
-          onPressed: (){
-            Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(
-                    builder: (context)=>Form_view()
-
-                ),
-                    (route)=>false
-            );
-          },
-          icon: const Icon(
-              Icons.arrow_back
-          ),
-        ),
       ),
         body: Stack(
           children: [

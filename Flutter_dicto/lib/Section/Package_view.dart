@@ -3,7 +3,9 @@ import 'package:flutter_dicto/Section/Package/Gap_package.dart';
 import 'package:flutter_dicto/Section/Package/Scartcher.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
+import '../Views/Screens/Menu.dart';
 import './Package/DayAndNight.dart';
+import 'API/ApiRead.dart';
 import 'Package/Animation1.dart';
 
 class Package_view extends StatelessWidget {
@@ -13,13 +15,15 @@ class Package_view extends StatelessWidget {
     FancyCard(
       color: const Color(0xFFffd22b),
       title: "Gap.dart",
-      link: () => const Gap_package(),
+      link: () => const ApiRead(),
+      // Gap_package(),
       image: 'assets/Package/gap.png',
     ),
     FancyCard(
       color: const Color(0xFFfeb204),
       title: "scratcher.dart",
-      link: () => const ScratcherCard(),
+      link: () => const ApiRead(),
+      // /ScratcherCard(),
       image: 'assets/Package/Scratcher.gif',
     ),
     // FancyCard(
@@ -31,13 +35,15 @@ class Package_view extends StatelessWidget {
     FancyCard(
       color: const Color(0xFFd53600),
       title: "day_night_switch.dart",
-      link: () =>const DayAndNight(),
+      link: () =>const ApiRead(),
+      // DayAndNight(),
       image: 'assets/Package/DayNight.gif',
     ),
     FancyCard(
       color:const Color(0xFFffd22b),
       title: "widget_and_text_animator.dart",
-      link: () =>const Animation1(),
+      link: () =>const ApiRead(),
+      // Animation1(),
       image: 'assets/Package/animation1.gif',
     ),
     // FancyCard(
@@ -70,7 +76,7 @@ class Package_view extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute(
-                builder: (context) => MyHomePage(),
+                builder: (context) => Menu(),
               ),
               (route) => false /* No Back option */,
             );

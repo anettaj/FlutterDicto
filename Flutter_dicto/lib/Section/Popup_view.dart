@@ -3,6 +3,8 @@ import 'package:flutter_dicto/Section/Widget/Popup/Popup1.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 
+import '../Views/Screens/Menu.dart';
+
 class Popup_view extends StatelessWidget {
   Popup_view({super.key});
 
@@ -71,7 +73,7 @@ class Popup_view extends StatelessWidget {
           onPressed: () {
             Navigator.pushAndRemoveUntil(
                 context,
-                MaterialPageRoute(builder: (context) => MyHomePage()),
+                MaterialPageRoute(builder: (context) => Menu()),
                     (route) => false);
           },
           icon: const Icon(Icons.arrow_back),

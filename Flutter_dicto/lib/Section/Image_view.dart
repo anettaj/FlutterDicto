@@ -4,6 +4,9 @@ import 'package:flutter_dicto/Section/Image/Image2.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 
+import '../Views/Screens/Menu.dart';
+import 'API/ApiRead.dart';
+
 
 
 class Image_view extends StatelessWidget {
@@ -14,13 +17,15 @@ class Image_view extends StatelessWidget {
     const ImageCards(
       color: Color(0xFFffd22b),
       title: "vertical_card_pager.dart",
-      link:Image1(),
+      link:ApiRead(),
+      // Image1(),
       image: 'assets/images/image1.gif',
     ),
     const ImageCards(
       color: Color(0xFFfeb204),
       title: "flutter_image_slideshow.dart",
-      link:Image2(),
+      link:ApiRead(),
+      // Image2(),
       image: 'assets/images/image2.png',
 
     ),
@@ -65,7 +70,7 @@ class Image_view extends StatelessWidget {
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                    builder: (context)=>MyHomePage()
+                    builder: (context)=>Menu()
 
                 ),
                     (route)=>false

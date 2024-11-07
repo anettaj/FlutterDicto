@@ -5,6 +5,8 @@ import 'package:flutter_dicto/Section/API/ApiWrite.dart';
 import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter_dicto/main.dart';
 
+import '../Views/Screens/Menu.dart';
+
 
 
 class Api_view extends StatelessWidget {
@@ -65,7 +67,7 @@ class Api_view extends StatelessWidget {
             Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                    builder: (context)=>MyHomePage()
+                    builder: (context)=>Menu()
 
                 ),
                     (route)=>false

@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "822362399642",
+    "project_id": "protfolioadmin",
+    "storage_bucket": "protfolioadmin.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822362399642:android:a64acb131fca3d25295023",
+        "android_client_info": {
+          "package_name": "com.Anet.flutter_dicto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsEW1BIWFNmW0aiB9dsIYZHBvSKXgiQ_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822362399642:android:c502d4bd51e15073295023",
+        "android_client_info": {
+          "package_name": "com.anet.portfolio_web_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsEW1BIWFNmW0aiB9dsIYZHBvSKXgiQ_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822362399642:android:1fe24cced9c3e6e6295023",
+        "android_client_info": {
+          "package_name": "com.anet.portfolioadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsEW1BIWFNmW0aiB9dsIYZHBvSKXgiQ_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
