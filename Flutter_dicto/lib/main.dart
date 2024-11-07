@@ -1,18 +1,5 @@
-import 'package:flutter_dicto/Section/Api_view.dart';
-import 'package:flutter_dicto/Section/Form_view.dart';
-import 'package:flutter_dicto/Section/Package_view.dart';
-// import 'package:stacked_card_carousel/stacked_card_carousel.dart';
-import 'package:flutter_dicto/Section/Image_view.dart';
-import 'package:flutter_dicto/Section/Menu_view.dart';
-import 'package:flutter_dicto/Widgets/Size.dart';
 import 'package:flutter/material.dart';
 import 'ApiKey/ApiKey.dart';
-import 'Controller/MenuController.dart';
-import 'Section/Popup_view.dart';
-import 'Section/Widget_view.dart';
-import 'package:easy_sidemenu/easy_sidemenu.dart';
-
-import 'Views/Constant/Colors.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'Views/Screens/Menu.dart';
 
