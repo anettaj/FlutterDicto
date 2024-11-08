@@ -53,8 +53,8 @@ class _MobileWidgetsState extends State<MobileWidgets> {
               return GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: columns,
-                  crossAxisSpacing: 10.0,
-                  mainAxisSpacing: 10.0,
+                  crossAxisSpacing: 15.0,
+                  mainAxisSpacing: 15.0,
                   childAspectRatio: 0.7,
                 ),
                 itemCount: webTemplates.length,
@@ -86,7 +86,7 @@ class _MobileWidgetsState extends State<MobileWidgets> {
                                   borderRadius: BorderRadius.circular(10),
                                   image: DecorationImage(
                                     image: NetworkImage(imageLink),
-                                    fit: BoxFit.fill,
+                                    fit: BoxFit.cover,
                                   ),
                                 ),
                               ),

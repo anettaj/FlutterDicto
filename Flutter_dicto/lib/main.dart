@@ -25,6 +25,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Dictionary',
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
+        iconTheme: IconThemeData(
+           color: Colors.white
+        ),
         scaffoldBackgroundColor: const Color(0xFF2C3333),
       ),
 

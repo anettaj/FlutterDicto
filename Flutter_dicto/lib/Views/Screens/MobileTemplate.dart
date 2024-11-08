@@ -53,9 +53,9 @@ class _MobileTemplateState extends State<MobileTemplate> {
               return GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: columns,
-                  crossAxisSpacing: 10.0,
+                  crossAxisSpacing: 15.0,
                   mainAxisSpacing: 10.0,
-                  childAspectRatio: 0.7,
+                  childAspectRatio: 0.55,
                 ),
                 itemCount: webTemplates.length,
                 itemBuilder: (context, index) {

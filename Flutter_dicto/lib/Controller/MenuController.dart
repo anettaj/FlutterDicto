@@ -22,6 +22,4 @@ class MenuPannelController extends GetxController {
     pageController.dispose();
     super.dispose();
   }
-
-
 }

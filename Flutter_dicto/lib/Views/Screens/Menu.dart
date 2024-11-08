@@ -32,9 +32,7 @@ class  Menu extends StatelessWidget {
             collapseWidth: 40,
             controller: menuController.sideMenu,
             style: SideMenuStyle(
-              // displayMode: SideMenuDisplayMode.auto,
               showHamburger: true,
-              // displayMode: SideMenuDisplayMode.auto,
               decoration: BoxDecoration(),
               displayMode: SideMenuDisplayMode.auto,
               openSideMenuWidth: 250,
@@ -81,7 +79,7 @@ class  Menu extends StatelessWidget {
                 icon: const Icon(Icons.web),
               ),
               SideMenuItem(
-                title: 'Full Widget',
+                title: 'Mobile Widget',
                 onTap: (index, _) {
                   menuController.sideMenu.changePage(index);
                 },
@@ -91,7 +89,7 @@ class  Menu extends StatelessWidget {
 
             ],
           ),
-          const VerticalDivider(width: 0),
+          // const VerticalDivider(width: 0),
           Expanded(
             child: PageView(
               controller: menuController.pageController,
