@@ -50,7 +50,7 @@ class _MobileTemplateState extends State<MobileTemplate> {
           return LayoutBuilder(
             builder: (context, constraints) {
               // Calculate the number of columns based on screen width
-              int columns = constraints.maxWidth < 600 ? 1 : 4; // Adjust based on screen size
+              int columns = constraints.maxWidth < 800 ?constraints.maxWidth<300 ?1:3 : 4; // Adjust based on screen size
               return GridView.builder(
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: columns,
@@ -63,6 +63,7 @@ class _MobileTemplateState extends State<MobileTemplate> {
                   var templateData = webTemplates[index].data() as Map<String, dynamic>;
                   String imageLink = templateData['imageLink'] ?? '';
                   String code = templateData['code'] ?? '';
+                  String title = templateData['title'] ?? '';
 
                   return MouseRegion(
                     onEnter: (_) {},
@@ -90,6 +91,18 @@ class _MobileTemplateState extends State<MobileTemplate> {
                                     fit: BoxFit.fill,
                                   ),
                                 ),
+                              ),
+                              Positioned(
+                                  top: 0,
+                                  left: 0,
+                                  child:Container(
+                                    padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+                                    decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius: BorderRadius.circular(5)
+                                    ),
+                                    child: Text(title,style: TextStyle(color: Colors.white),),
+                                  )
                               ),
                               Positioned(
                                 bottom: 0,

@@ -25,8 +25,8 @@ class _WebTemplateState extends State<WebTemplate> {
       child: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance
             .collection('FlutterLibrary')
-            .orderBy('createdAt',descending: false)
-            // .where('category', isEqualTo: 'Web')
+            .where('category', isEqualTo: 'Web')
+            .orderBy('createdAt', descending: true)
             .snapshots(),
         builder: (context, snapshot) {
           // Check for the connection state
@@ -63,6 +63,7 @@ class _WebTemplateState extends State<WebTemplate> {
                   var templateData = webTemplates[index].data() as Map<String, dynamic>;
                   String imageLink = templateData['imageLink'] ?? '';
                   String code = templateData['code'] ?? '';
+                  String title = templateData['title'] ?? '';
 
                   return MouseRegion(
                     onEnter: (_) {},
@@ -90,6 +91,18 @@ class _WebTemplateState extends State<WebTemplate> {
                                     fit: BoxFit.cover,
                                   ),
                                 ),
+                              ),
+                              Positioned(
+                                  top: 0,
+                                  left: 0,
+                                  child:Container(
+                                    padding: EdgeInsets.symmetric(vertical: 5,horizontal: 10),
+                                    decoration: BoxDecoration(
+                                        color: Colors.black,
+                                        borderRadius: BorderRadius.circular(5)
+                                    ),
+                                    child: Text(title,style: TextStyle(color: Colors.white),),
+                                  )
                               ),
                               Positioned(
                                 bottom: 0,
