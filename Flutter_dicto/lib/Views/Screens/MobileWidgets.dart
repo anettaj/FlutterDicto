@@ -26,6 +26,7 @@ class _MobileWidgetsState extends State<MobileWidgets> {
         stream: FirebaseFirestore.instance
             .collection('FlutterLibrary')
             .where('category', isEqualTo: 'Widget')
+            .orderBy('createdAt', descending: true)
             .snapshots(),
         builder: (context, snapshot) {
           // Check for the connection state

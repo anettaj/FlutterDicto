@@ -25,7 +25,8 @@ class _MobileTemplateState extends State<MobileTemplate> {
       child: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance
             .collection('FlutterLibrary')
-            .where('category', isEqualTo: 'Mobile')
+            .where('category', isEqualTo: 'Mobile',)
+            .orderBy('createdAt', descending: true)
             .snapshots(),
         builder: (context, snapshot) {
           // Check for the connection state
